@@ -11,6 +11,6 @@ namespace SupermarketWEB.Models
         public decimal Price { get; set; }
         public int Stock { get; set; }
         public int CategoryId { get; set; } // Será la llave foránea
-        public Category Category { get; set; } // Propiedad de navegación
+        public Category Category { get; set; } = default; // Propiedad de navegación
     }
 }
