@@ -5,29 +5,27 @@ using Microsoft.EntityFrameworkCore;
 using SupermarketWEB.Data;
 using SupermarketWEB.Models;
 
-namespace SupermarketWEB.Pages.Paymodes
+namespace SupermarketWEB.Pages.Userss
 {
-    [Authorize]
-    public class PayIndexModel : PageModel
+    public class UserIndexModel : PageModel
     {
         private readonly SumpermarketContext _context;
 
-        public PayIndexModel(SumpermarketContext context)
+        public UserIndexModel(SumpermarketContext context)
         {
             _context = context;
         }
-
-        public IList<Paymode> Paymode { get; set; } = default!;
+     
+        public IList<Users> Users { get; set; } = default!;
 
 
         public async Task OnGetAsync()
         {
 
-            if (_context.Paymode != null)
+            if (_context.User != null)
             {
-                Paymode = await _context.Paymode.ToListAsync();
+                Users = await _context.User.ToListAsync();
             }
         }
     }
 }
-

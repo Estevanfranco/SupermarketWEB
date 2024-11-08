@@ -6,22 +6,22 @@
 }
 <h1>Index Paymodes</h1>
 <p>
-    <a asp-page="Create" class="btn btn-success">Create New</a>
+    <a asp-page="PayCreate" class="btn btn-success">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Paymodes[0].Name)
+                @Html.DisplayNameFor(model => model.Paymode[0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Paymodes[0].Observation)
+                @Html.DisplayNameFor(model => model.Paymode[0].Observation)
             </th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Paymodes)
+        @foreach (var item in Model.Paymode)
         {
             <tr>
                 <td>
@@ -31,8 +31,8 @@
                     @Html.DisplayFor(modelItem => item.Observation)
                 </td>
                 <td>
-                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
-                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                    <a asp-page="./PayDelete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    <a asp-page="./PayEdit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
                 </td>
 
             </tr>
