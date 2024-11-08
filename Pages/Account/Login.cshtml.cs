@@ -78,7 +78,7 @@ namespace Autenticacion.Pages.Account
                 // Crear los Claims basados en los datos del usuario en la base de datos
                 var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, userInDb.Email),  // Puedes ajustar este valor según la información que quieras almacenar
+                  // Puedes ajustar este valor según la información que quieras almacenar
                 new Claim(ClaimTypes.Email, userInDb.Email)
             };
 
